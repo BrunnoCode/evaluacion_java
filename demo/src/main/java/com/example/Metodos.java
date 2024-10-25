@@ -193,8 +193,11 @@ private static void listarVehiculos(Taller taller) {
       if (!cliente.getVehiculos().isEmpty()) {
           hayVehiculos = true;
           System.out.println("Propietario: " + cliente.getNombre() + " (Tel: " + cliente.getTelefono() + ")");
+          int cantidad = 1;
           for (Vehiculo vehiculo : cliente.getVehiculos()) {
+              System.out.println("\n----Vehiculo "+cantidad+"----");
               vehiculo.mostrarInfoVehiculo();
+              cantidad++;
           }
           System.out.println(); // Separador entre clientes
       }
