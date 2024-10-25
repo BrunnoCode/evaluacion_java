@@ -22,9 +22,12 @@ public class Cliente extends Persona {
   public void mostrarInfo() {
       System.out.println("Nombre: " + getNombre());
       System.out.println("Teléfono: " + getTelefono());
-      System.out.println("Vehículos:");
+      System.out.println("----Vehículos----");
+      int cantidad = 1;
       for (Vehiculo vehiculo : vehiculos) {
           vehiculo.mostrarInfoVehiculo();
+          cantidad++;
+          System.out.println("\n----Vehiculo"+cantidad+"----");
       }
   }
 }
